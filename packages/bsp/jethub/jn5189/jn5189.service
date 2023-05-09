@@ -1,0 +1,9 @@
+[Unit]
+Description=JN5189
+After=amlogicw1.target
+
+[Service]
+ExecStart=/usr/lib/firmware/jn5189/jn5189_func.sh start
+
+[Install]
+WantedBy=multi-user.target

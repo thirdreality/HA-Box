@@ -1,0 +1,9 @@
+[Unit]
+Description=AmlogicW1
+Before=wpa_suppplicant-nl80211@wlan0.target
+
+[Service]
+ExecStart=/usr/lib/firmware/w1/w1_start.sh
+
+[Install]
+WantedBy=multi-user.target
