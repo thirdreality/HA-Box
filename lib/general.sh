@@ -1654,6 +1654,12 @@ function get_urls()
 
 		rootfs)
 			local CCODE=$(curl --silent --fail  https://cache.armbian.com/geoip | jq '.continent.code' -r)
+            if [ $filename == "arm64-jammy-cli-1cfdbadf-.tar.zst" ]; then
+                filename="0121/arm64-jammy-cli-0f824db8-0121.tar.zst"
+            fi
+            if [ $filename == "arm64-jammy-cli-1cfdbadf-.tar.zst.asc" ]; then
+                filename="0121/arm64-jammy-cli-0f824db8-0121.tar.zst.asc"
+            fi
 			local urls=(
 				# "https://cache.armbian.com/rootfs/${ROOTFSCACHE_VERSION}/${filename}"
 				"https://github.com/armbian/cache/releases/download/${ROOTFSCACHE_VERSION}/${filename}"
