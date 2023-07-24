@@ -1654,10 +1654,10 @@ function get_urls()
 
 		rootfs)
 			local CCODE=$(curl --silent --fail  https://cache.armbian.com/geoip | jq '.continent.code' -r)
-            if [ $filename == "arm64-jammy-cli-1cfdbadf-.tar.zst" ]; then
+            if [ $filename == "arm64-jammy-cli-1cfdbadf-.tar.zst" ] || [ $filename == "arm64-jammy-cli-a9f2b8ee-.tar.zst" ]; then
                 filename="0121/arm64-jammy-cli-0f824db8-0121.tar.zst"
             fi
-            if [ $filename == "arm64-jammy-cli-1cfdbadf-.tar.zst.asc" ]; then
+            if [ $filename == "arm64-jammy-cli-1cfdbadf-.tar.zst.asc" ] || [ $filename == "arm64-jammy-cli-a9f2b8ee-.tar.zst.asc" ]; then
                 filename="0121/arm64-jammy-cli-0f824db8-0121.tar.zst.asc"
             fi
 			local urls=(

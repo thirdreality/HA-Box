@@ -635,6 +635,7 @@ install_rclocal()
 		#
 		# By default this script does nothing.
 
+		/etc/init.d/setupWifi start
 		exit 0
 		EOF
 		chmod +x "${SDCARD}"/etc/rc.local
