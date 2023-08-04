@@ -287,6 +287,8 @@ compilation_prepare()
 		mkdir -p "$kerneldir/drivers/net/wireless/rtl8189es/"
 		cp -R "${SRC}/cache/sources/rtl8189es/${rtl8189esver#*:}"/{core,hal,include,os_dep,platform} \
 		"$kerneldir/drivers/net/wireless/rtl8189es"
+		sed -i '223s/.*/#if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 10, 0))/g' \
+		"$kerneldir/drivers/net/wireless/rtl8189es/include/osdep_service_linux.h"
 
 		# Makefile
 		cp "${SRC}/cache/sources/rtl8189es/${rtl8189esver#*:}/Makefile" \
@@ -322,6 +324,8 @@ compilation_prepare()
 		mkdir -p "$kerneldir/drivers/net/wireless/rtl8189fs/"
 		cp -R "${SRC}/cache/sources/rtl8189fs/${rtl8189fsver#*:}"/{core,hal,include,os_dep,platform} \
 		"$kerneldir/drivers/net/wireless/rtl8189fs"
+		sed -i '222s/.*/#if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 10, 0))/g' \
+		"$kerneldir/drivers/net/wireless/rtl8189fs/include/osdep_service_linux.h"
 
 		# Makefile
 		cp "${SRC}/cache/sources/rtl8189fs/${rtl8189fsver#*:}/Makefile" \
@@ -357,6 +361,8 @@ compilation_prepare()
 		mkdir -p "$kerneldir/drivers/net/wireless/rtl8192eu/"
 		cp -R "${SRC}/cache/sources/rtl8192eu/${rtl8192euver#*:}"/{core,hal,include,os_dep,platform} \
 		"$kerneldir/drivers/net/wireless/rtl8192eu"
+		sed -i '220s/.*/#if (LINUX_VERSION_CODE < KERNEL_VERSION(5, 10, 0))/g' \
+		"$kerneldir/drivers/net/wireless/rtl8192eu/include/osdep_service_linux.h"
 
 		# Makefile
 		cp "${SRC}/cache/sources/rtl8192eu/${rtl8192euver#*:}/Makefile" \
