@@ -125,7 +125,7 @@ systemctl enable bl706.service
 systemctl start bl706.service
 ```
 
-### Configure HA
+### Install HA
 
 Install necessary tools.
 
@@ -147,7 +147,8 @@ wget https://github.com/home-assistant/os-agent/releases/download/1.5.1/os-agent
 dpkg -i os-agent_1.5.1_linux_aarch64.deb
 ```
 
-Install Home Assistant. (When homeassistant-supervised.deb is installed, NetworkManager will start so that the network cannot be connected. Therefore, we need to modify homeassistant-supervise.deb.)
+Install Home Assistant. 
+(When homeassistant-supervised.deb is installed, NetworkManager will start so that the network cannot be connected. Therefore, we need to modify homeassistant-supervise.deb.)
 ```bash
 wget https://github.com/home-assistant/supervised-installer/releases/download/1.4.3/homeassistant-supervised.deb
 dpkg-deb -R homeassistant-supervised.deb homeassistant-supervised
@@ -173,14 +174,15 @@ BYPASS_OS_CHECK=true dpkg -i homeassistant-supervised.deb
 
 Machine type. Choose `raspberrypi4-64`.
 
-<a href="#config-choose-raspberrypi4"><img src="images/README/Config-choose_raspberrypi4.png" alt="Armbian logo" width="30%"></a>
+<a href="#install-ha-choose-raspberrypi4"><img src="images/README/Config-choose_raspberrypi4.png" alt="Armbian logo" width="30%"></a>
 
 After the installation is complete, the following screen is displayed.
 
-<a href="#ha-add-integration"><img src="images/README/HA-ADD_INTEGRATION.png" alt="Armbian logo" width="80%"></a>
+<a href="#install-ha-complete"><img src="images/README/Config-ha_complete.png" alt="Armbian logo" width="80%"></a>
 
+### Configure HA
 
-Wait about 20 minutes, then type `http://10.1.0.31:8123` into your browser.
+Wait about 20 minutes, then type `http://10.1.0.97:8123` into your browser.
 
 Click `Settings -> Devices & Services`.
 
