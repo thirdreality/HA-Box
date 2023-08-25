@@ -38,7 +38,9 @@ Run in the root directory of Armbian.
 ./compile.sh BOARD=jethubj100 BRANCH=current RELEASE=jammy BUILD_MINIMAL=no BUILD_DESKTOP=no KERNEL_ONLY=no KERNEL_CONFIGURE=no COMPRESS_OUTPUTIMAGE=sha,gpg,img
 ```
 
-The compiled generated firmware is located: `output/images/Armbian_22.11.0-trunk_Jethubj100_jammy_current_5.10.166.img`. (This firmware is not yet available for burning.)
+The compiled generated firmware is located: `output/images/Armbian_22.11.0-trunk_Jethubj100_jammy_current_5.10.166.img`
+
+(This firmware is not yet available for burning.)
 
 ### Firmware
 
@@ -76,7 +78,7 @@ To prepare the burning environment on the computer:
 5. Click on `Start` to initiate the burn process.
 6. Press and hold the button circled in the image below, then connect the black line to your computer and start flashing. You can release the button when you start flashing.
 
-<a href="#flash-box"><img src="images/README/Flash-box.png" alt="Armbian logo" width="100%"></a>
+<a href="#flash-box"><img src="images/README/Flash-box.png" alt="Armbian logo" width="50%"></a>
 
 
 ## Configuring HA
@@ -85,7 +87,7 @@ To prepare the burning environment on the computer:
 Connect both cables to your computer as shown in the image below.
 You will see the logging info from the PC terminal. (baud rate is: 115200)
 
-<a href="#config-serial-debug-box"><img src="images/README/Config-serial_debug_box.png" alt="Armbian logo" width="100%"></a>
+<a href="#config-serial-debug-box"><img src="images/README/Config-serial_debug_box.png" alt="Armbian logo" width="50%"></a>
 
 ### Create a root user
 
@@ -93,7 +95,7 @@ You will see the logging info from the PC terminal. (baud rate is: 115200)
 * Choose default system command shell: choose 1) bash
 * We don't need to create regular users. Press `Ctrl-C` to abort
 
-<a href="#config-create-root-user"><img src="images/README/Config-create_root_user.png" alt="Armbian logo" width="100%"></a>
+<a href="#config-create-root-user"><img src="images/README/Config-create_root_user.png" alt="Armbian logo" width="50%"></a>
 
 
 ### Configure WiFi
@@ -171,36 +173,36 @@ BYPASS_OS_CHECK=true dpkg -i homeassistant-supervised.deb
 
 Machine type. Choose `raspberrypi4-64`.
 
-<a href="#config-choose-raspberrypi4"><img src="images/README/Config-choose_raspberrypi4.png" alt="Armbian logo" width="100%"></a>
+<a href="#config-choose-raspberrypi4"><img src="images/README/Config-choose_raspberrypi4.png" alt="Armbian logo" width="30%"></a>
 
 After the installation is complete, the following screen is displayed.
 
-<a href="#ha-add-integration"><img src="images/README/HA-ADD_INTEGRATION.png" alt="Armbian logo" width="100%"></a>
+<a href="#ha-add-integration"><img src="images/README/HA-ADD_INTEGRATION.png" alt="Armbian logo" width="80%"></a>
 
 
 Wait about 20 minutes, then type `http://10.1.0.31:8123` into your browser.
 
 Click `Settings -> Devices & Services`.
 
-<a href="#ha-devices-services."><img src="images/README/HA-Devices_Services.png" alt="Armbian logo" width="100%"></a>
+<a href="#ha-devices-services."><img src="images/README/HA-Devices_Services.png" alt="Armbian logo" width="80%"></a>
 
 Click `ADD INTEGRATION`.
 
-<a href="#ha-add-integration"><img src="images/README/HA-ADD_INTEGRATION.png" alt="Armbian logo" width="100%"></a>
+<a href="#ha-add-integration"><img src="images/README/HA-ADD_INTEGRATION.png" alt="Armbian logo" width="80%"></a>
 
 Choose `Zigbee Home Automation`
 
-<a href="#ha-choose-zha"><img src="images/README/HA-Choose_ZHA.png" alt="Armbian logo" width="100%"></a>
+<a href="#ha-choose-zha"><img src="images/README/HA-Choose_ZHA.png" alt="Armbian logo" width="30%"></a>
 
 Choose `ZiGate`
 
-<a href="#ha-zha-zigate"><img src="images/README/HA-ZHA-Zigate.png" alt="Armbian logo" width="100%"></a>
+<a href="#ha-zha-zigate"><img src="images/README/HA-ZHA-ZiGate.png" alt="Armbian logo" width="40%"></a>
 
 Input `/dev/ttyAML3`
 
-<a href="#ha-zha-serial-port"><img src="images/README/HA-ZHA-Serial_Port.png" alt="Armbian logo" width="100%"></a>
+<a href="#ha-zha-serial-port"><img src="images/README/HA-ZHA-Serial_Port.png" alt="Armbian logo" width="30%"></a>
 
 Choose Create a network
 
-<a href="#ha-zha-create_network"><img src="images/README/HA-ZHA-Create_network.png" alt="Armbian logo" width="100%"></a>
+<a href="#ha-zha-create_network"><img src="images/README/HA-ZHA-Create_network.png" alt="Armbian logo" width="30%"></a>
 
