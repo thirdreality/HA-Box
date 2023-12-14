@@ -120,9 +120,10 @@ reboot
 
 ### Configure Zigbee
 
-Flash zigbee firmware. The first flash takes a long time because some dependencies need to be installed.
+Flash zigbee firmware. The first flash takes a long time because some dependencies need to be installed. The command `apt update` is required before burning.
 
 ```bash
+apt update
 /usr/lib/firmware/bl706/bl706_func.sh flash
 ```
 
@@ -151,7 +152,8 @@ curl -fsSL get.docker.com | sh
 Install OS Agent.
 
 ```bash
-wget https://github.com/home-assistant/os-agent/releases/download/1.5.1/os-agent_1.5.1_linux_aarch64.deb  (View the latest installation package：https://github.com/home-assistant/os-agent/releases/latest)
+(View the latest installation package：https://github.com/home-assistant/os-agent/releases/latest)
+wget https://github.com/home-assistant/os-agent/releases/download/1.5.1/os-agent_1.5.1_linux_aarch64.deb
 dpkg -i os-agent_1.5.1_linux_aarch64.deb
 ```
 
